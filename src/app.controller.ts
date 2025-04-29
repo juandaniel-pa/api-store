@@ -7,6 +7,16 @@ export class AppController {
 
   @Get()
   getHello(): string {
-    return this.appService.getHello();
+    return 'Nueva api en NEST';
+  }
+
+  @Get('nuevo-endpoint')
+  newEndpoint() {
+    return 'yo soy nuevo';
+  }
+
+  @Get('/ruta/')
+  otherEndpoint() {
+    return 'Con /sas/';
   }
 }
